@@ -200,26 +200,6 @@
           </a>
         </li>
       
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            Tags
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-schedule">
-          <a href="/schedule" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-calendar"></i> <br />
-            
-            Schedule
-          </a>
-        </li>
-      
 
       
     </ul>
@@ -303,15 +283,34 @@
       
         
           
-            <p>Welcome to My personal blog! This is literally my <strong>first</strong> post on my <strong>first</strong> blog. </p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+            <p>Welcome to My personal blog! This is literally my <strong>first</strong> post on my <strong>first</strong> blog. I am going to introduce how I build this blog.</p>
+<p>Two major tools are used:</p>
+<ol>
+<li><a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>: a fast and simple blog framework. Very easy to develop and deploy  personal blog, and it <strong>support markdown</strong> posts, which is my favorite note tool. <a href="http://www.typora.io/" target="_blank" rel="external">Typora</a> is recommended as a simple and clean markdown post editor.</li>
+<li><a href="https://github.com/iissnan/hexo-theme-next/blob/master/README.en.md" target="_blank" rel="external">NexT theme</a>: personal preference, an elegant and clean Hexo theme.</li>
+</ol>
+<h2 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h2><ul>
+<li>Pre-downloaded Hexo repository</li>
+</ul>
+<h2 id="Construction"><a href="#Construction" class="headerlink" title="Construction"></a>Construction</h2><ol>
+<li><p>In your site/Hexo repo directory, download NexT theme.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">cd</span> your-hexo-site</div><div class="line">$ git <span class="built_in">clone</span> https://github.com/iissnan/hexo-theme-next themes/next</div></pre></td></tr></table></figure>
+</li>
+<li><p>Configure NexT theme in Hexo directory. Apply NexT theme in <code>_config.xml</code> configuration file in root directory.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Extensions</span></div><div class="line"><span class="comment">## Plugins: http://hexo.io/plugins/</span></div><div class="line"><span class="comment">## Themes: http://hexo.io/themes/</span></div><div class="line"><span class="comment"># theme: landscape</span></div><div class="line">theme: next</div></pre></td></tr></table></figure>
+<blockquote>
+<p>You can change different schemes based on your personal perference in <code>_config.xml</code> in theme directory. For example, <code>scheme: Pisces</code> can be applied in <code>_config.xml</code> file if you want to apply pisces scheme.</p>
+</blockquote>
+</li>
+<li><p>Learn how to develop and publish <a href="https://pages.github.com/" target="_blank" rel="external">Github Pages</a> in Github.</p>
+</li>
+<li><p>Generate static files and <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">deploy</a> your blog website to Github page.</p>
+<p>Configure deploy options in configuration file in root directory and use the following command.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+</li>
+<li><p>Some other things like tag page or 404 page can also be set manually by following the <a href="https://hexo.io/" target="_blank" rel="external">official hexo guide</a>.</p>
+</li>
+</ol>
 
           
         
@@ -390,10 +389,10 @@
 
           
             <div class="site-state-item site-state-tags">
-              <a href="/tags">
+              
                 <span class="site-state-item-count">1</span>
                 <span class="site-state-item-name">tags</span>
-              </a>
+              
             </div>
           
 
