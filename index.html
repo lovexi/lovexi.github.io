@@ -239,6 +239,122 @@
             
               
                 
+                <a class="post-title-link" href="/2017/10/23/emacs-learning-2/" itemprop="url">
+                  emacs-learning-2
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2017-10-23T18:04:07-05:00" content="2017-10-23">
+              2017-10-23
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Emacs-lisp"><a href="#Emacs-lisp" class="headerlink" title="Emacs lisp"></a>Emacs lisp</h1><p>Emacs lisp is a dialect of Lisp language family used for script language in Emacs. For the pragraming process, it has similar machanism with lisp or mit-scheme (another dialect of Lisp). Since emacs lisp (Elisp for short) functions as a script language inside Emacs, it is necessary to learn Elisp for deeper understanding of Emacs and further hacking purpose.</p>
+<p>Inside the emacs, the lisp repl can be invoked by switching to <strong>*scratch*</strong> buffer. (<code>C-x b</code> searches for the specific buffer. Default buffer will be <strong>*scratch*</strong>)</p>
+<p>While interacting with Elisp, we can use <code>C-x C-e</code> or <code>C-j</code> to compile our procedure.</p>
+<p>A <a href="https://learnxinyminutes.com/docs/elisp/" target="_blank" rel="external">useful reference</a> provides more details and basic knowledge about Elisp.</p>
+<p>Reverse polish notation is used for number calculations in Elisp:</p>
+<figure class="highlight lisp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">(<span class="name">+</span> <span class="number">2</span> <span class="number">2</span>)</div><div class="line"><span class="number">4</span></div><div class="line">(<span class="name">+</span> <span class="number">2</span> (<span class="name">*</span> <span class="number">3</span> <span class="number">4</span>))</div><div class="line"><span class="number">14</span></div></pre></td></tr></table></figure>
+<p><code>setq</code> is used to create a new variable. <code>insert</code> is able to insert the string.</p>
+<figure class="highlight lisp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">(<span class="name">setq</span> my-name <span class="string">"Yang"</span>)</div><div class="line"><span class="string">"Yang"</span></div><div class="line">(<span class="name">insert</span> <span class="string">"Hello "</span> my-name)</div></pre></td></tr></table></figure>
+<p>Here, when we input <code>C-x C-e</code>, the lisp will insert string <code>Hello Yang</code> in the following of the <code>insert</code>command.</p>
+<figure class="highlight lisp"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">(<span class="name">insert</span> <span class="string">"Hello "</span> my-name)Hello Yang</div></pre></td></tr></table></figure>
+<p><code>defun</code> can define a new function in the Elisp.</p>
+<figure class="highlight lisp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">(<span class="name">defun</span> func () (<span class="name">insert</span> <span class="string">"Hello"</span>))</div><div class="line">(<span class="name">func</span>)</div></pre></td></tr></table></figure>
+<p><code>switch-to-buffer-other-window</code> is used to create a new window with specific buffer.</p>
+<figure class="highlight lisp"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">(<span class="name">switch-to-buffer-other-window</span> <span class="string">"*test*"</span>) <span class="comment">;; switch to a buffer called *test*</span></div></pre></td></tr></table></figure>
+<p><code>progn</code> combines multiple expressions into one expression.</p>
+<figure class="highlight lisp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">(<span class="name">progn</span></div><div class="line">  (<span class="name">switch-to-buffer-other-window</span> <span class="string">"*test*"</span>)</div><div class="line">  (<span class="name">hello</span>)</div><div class="line">  (<span class="name">other-window</span> <span class="number">1</span>))</div></pre></td></tr></table></figure>
+<p><code>let</code> binds a value to a local variable.</p>
+<figure class="highlight lisp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">(<span class="name">let</span> ((<span class="name">local-name</span> <span class="string">"yang"</span>))</div><div class="line">     (<span class="name">hello</span> local-name))</div></pre></td></tr></table></figure>
+<p><code>format</code> is able to format a string with given format formula:</p>
+<figure class="highlight lisp"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">(<span class="name">format</span> <span class="string">"hello %s!\n"</span> <span class="string">"visitor"</span>)</div></pre></td></tr></table></figure>
+<p>Of course, there are some interative commands like <code>read-from-minibuffer</code>:</p>
+<figure class="highlight lisp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">(<span class="name">read-from-minibuffer</span> <span class="string">"Enter your name:"</span>)</div><div class="line"><span class="comment">;;; you can get variable name from prompt, such as</span></div><div class="line"></div><div class="line">(<span class="name">defun</span> greeting (<span class="name">from-name</span>)</div><div class="line">  (<span class="name">let</span> ((<span class="name">your-name</span> (<span class="name">read-from-minibuffer</span> <span class="string">"Enter your name: "</span>)))</div><div class="line">    (<span class="name">insert</span> (<span class="name">format</span> <span class="string">"Hello!\n\nI am %s and you are %s."</span></div><div class="line">                    from-name <span class="comment">; the argument of the function</span></div><div class="line">                    your-name <span class="comment">; the let-bound var, entered at prompt</span></div><div class="line">                    ))))</div><div class="line"><span class="comment">;;; evaluate this command</span></div><div class="line">(<span class="name">greeting</span> <span class="string">"Jack"</span>)</div></pre></td></tr></table></figure>
+<p>In this post, it just summaries the basic opeartions from the link mentioned in the first paragraph. More functions or data-structure operations can be discovered in the future code reading.</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2017/10/20/emacs-learning-1/" itemprop="url">
                   emacs-learning-1
                 </a>
@@ -716,7 +832,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-count">3</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>

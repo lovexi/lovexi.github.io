@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="front-end," />
+  <meta name="keywords" content="emacs," />
 
 
 
@@ -84,25 +84,16 @@
 
 
 
-<meta name="description" content="Welcome to My personal blog! This is literally my first post on my first blog. I am going to introduce how I build this blog.
-Two major tools are used:
-
-Hexo: a fast and simple blog framework. Very ea">
+<meta name="description" content="Emacs lispEmacs lisp is a dialect of Lisp language family used for script language in Emacs. For the pragraming process, it has similar machanism with lisp or mit-scheme (another dialect of Lisp). Sin">
 <meta property="og:type" content="article">
-<meta property="og:title" content="My blog construction">
-<meta property="og:url" content="http://yoursite.com/2016/11/09/hello-world/index.html">
+<meta property="og:title" content="emacs-learning-2">
+<meta property="og:url" content="http://yoursite.com/2017/10/23/emacs-learning-2/index.html">
 <meta property="og:site_name" content="Hello World">
-<meta property="og:description" content="Welcome to My personal blog! This is literally my first post on my first blog. I am going to introduce how I build this blog.
-Two major tools are used:
-
-Hexo: a fast and simple blog framework. Very ea">
-<meta property="og:updated_time" content="2017-10-21T03:39:45.000Z">
+<meta property="og:description" content="Emacs lispEmacs lisp is a dialect of Lisp language family used for script language in Emacs. For the pragraming process, it has similar machanism with lisp or mit-scheme (another dialect of Lisp). Sin">
+<meta property="og:updated_time" content="2017-10-27T02:30:20.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="My blog construction">
-<meta name="twitter:description" content="Welcome to My personal blog! This is literally my first post on my first blog. I am going to introduce how I build this blog.
-Two major tools are used:
-
-Hexo: a fast and simple blog framework. Very ea">
+<meta name="twitter:title" content="emacs-learning-2">
+<meta name="twitter:description" content="Emacs lispEmacs lisp is a dialect of Lisp language family used for script language in Emacs. For the pragraming process, it has similar machanism with lisp or mit-scheme (another dialect of Lisp). Sin">
 
 
 
@@ -123,10 +114,10 @@ Hexo: a fast and simple blog framework. Very ea">
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/11/09/hello-world/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/10/23/emacs-learning-2/"/>
 
 
-  <title> My blog construction | Hello World </title>
+  <title> emacs-learning-2 | Hello World </title>
 </head>
 
 <body itemscope itemtype="//schema.org/WebPage" lang="en">
@@ -246,7 +237,7 @@ Hexo: a fast and simple blog framework. Very ea">
             
             
               
-                My blog construction
+                emacs-learning-2
               
             
           </h1>
@@ -258,8 +249,8 @@ Hexo: a fast and simple blog framework. Very ea">
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-11-09T12:33:07-06:00" content="2016-11-09">
-              2016-11-09
+            <time itemprop="dateCreated" datetime="2017-10-23T18:04:07-05:00" content="2017-10-23">
+              2017-10-23
             </time>
           </span>
 
@@ -286,34 +277,29 @@ Hexo: a fast and simple blog framework. Very ea">
       
 
       
-        <p>Welcome to My personal blog! This is literally my <strong>first</strong> post on my <strong>first</strong> blog. I am going to introduce how I build this blog.</p>
-<p>Two major tools are used:</p>
-<ol>
-<li><a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>: a fast and simple blog framework. Very easy to develop and deploy  personal blog, and it <strong>support markdown</strong> posts, which is my favorite note tool. <a href="http://www.typora.io/" target="_blank" rel="external">Typora</a> is recommended as a simple and clean markdown post editor.</li>
-<li><a href="https://github.com/iissnan/hexo-theme-next/blob/master/README.en.md" target="_blank" rel="external">NexT theme</a>: personal preference, an elegant and clean Hexo theme.</li>
-</ol>
-<h2 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h2><ul>
-<li>Pre-downloaded Hexo repository</li>
-</ul>
-<h2 id="Construction"><a href="#Construction" class="headerlink" title="Construction"></a>Construction</h2><ol>
-<li><p>In your site/Hexo repo directory, download NexT theme.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">cd</span> your-hexo-site</div><div class="line">$ git <span class="built_in">clone</span> https://github.com/iissnan/hexo-theme-next themes/next</div></pre></td></tr></table></figure>
-</li>
-<li><p>Configure NexT theme in Hexo directory. Apply NexT theme in <code>_config.xml</code> configuration file in root directory.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Extensions</span></div><div class="line"><span class="comment">## Plugins: http://hexo.io/plugins/</span></div><div class="line"><span class="comment">## Themes: http://hexo.io/themes/</span></div><div class="line"><span class="comment"># theme: landscape</span></div><div class="line">theme: next</div></pre></td></tr></table></figure>
-<blockquote>
-<p>You can change different schemes based on your personal perference in <code>_config.xml</code> in theme directory. For example, <code>scheme: Pisces</code> can be applied in <code>_config.xml</code> file if you want to apply pisces scheme.</p>
-</blockquote>
-</li>
-<li><p>Learn how to develop and publish <a href="https://pages.github.com/" target="_blank" rel="external">Github Pages</a> in Github.</p>
-</li>
-<li><p>Generate static files and <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">deploy</a> your blog website to Github page.</p>
-<p>Configure deploy options in configuration file in root directory and use the following command.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-</li>
-<li><p>Some other things like tag page or 404 page can also be set manually by following the <a href="https://hexo.io/" target="_blank" rel="external">official hexo guide</a>.</p>
-</li>
-</ol>
+        <h1 id="Emacs-lisp"><a href="#Emacs-lisp" class="headerlink" title="Emacs lisp"></a>Emacs lisp</h1><p>Emacs lisp is a dialect of Lisp language family used for script language in Emacs. For the pragraming process, it has similar machanism with lisp or mit-scheme (another dialect of Lisp). Since emacs lisp (Elisp for short) functions as a script language inside Emacs, it is necessary to learn Elisp for deeper understanding of Emacs and further hacking purpose.</p>
+<p>Inside the emacs, the lisp repl can be invoked by switching to <strong>*scratch*</strong> buffer. (<code>C-x b</code> searches for the specific buffer. Default buffer will be <strong>*scratch*</strong>)</p>
+<p>While interacting with Elisp, we can use <code>C-x C-e</code> or <code>C-j</code> to compile our procedure.</p>
+<p>A <a href="https://learnxinyminutes.com/docs/elisp/" target="_blank" rel="external">useful reference</a> provides more details and basic knowledge about Elisp.</p>
+<p>Reverse polish notation is used for number calculations in Elisp:</p>
+<figure class="highlight lisp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">(<span class="name">+</span> <span class="number">2</span> <span class="number">2</span>)</div><div class="line"><span class="number">4</span></div><div class="line">(<span class="name">+</span> <span class="number">2</span> (<span class="name">*</span> <span class="number">3</span> <span class="number">4</span>))</div><div class="line"><span class="number">14</span></div></pre></td></tr></table></figure>
+<p><code>setq</code> is used to create a new variable. <code>insert</code> is able to insert the string.</p>
+<figure class="highlight lisp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">(<span class="name">setq</span> my-name <span class="string">"Yang"</span>)</div><div class="line"><span class="string">"Yang"</span></div><div class="line">(<span class="name">insert</span> <span class="string">"Hello "</span> my-name)</div></pre></td></tr></table></figure>
+<p>Here, when we input <code>C-x C-e</code>, the lisp will insert string <code>Hello Yang</code> in the following of the <code>insert</code>command.</p>
+<figure class="highlight lisp"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">(<span class="name">insert</span> <span class="string">"Hello "</span> my-name)Hello Yang</div></pre></td></tr></table></figure>
+<p><code>defun</code> can define a new function in the Elisp.</p>
+<figure class="highlight lisp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">(<span class="name">defun</span> func () (<span class="name">insert</span> <span class="string">"Hello"</span>))</div><div class="line">(<span class="name">func</span>)</div></pre></td></tr></table></figure>
+<p><code>switch-to-buffer-other-window</code> is used to create a new window with specific buffer.</p>
+<figure class="highlight lisp"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">(<span class="name">switch-to-buffer-other-window</span> <span class="string">"*test*"</span>) <span class="comment">;; switch to a buffer called *test*</span></div></pre></td></tr></table></figure>
+<p><code>progn</code> combines multiple expressions into one expression.</p>
+<figure class="highlight lisp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">(<span class="name">progn</span></div><div class="line">  (<span class="name">switch-to-buffer-other-window</span> <span class="string">"*test*"</span>)</div><div class="line">  (<span class="name">hello</span>)</div><div class="line">  (<span class="name">other-window</span> <span class="number">1</span>))</div></pre></td></tr></table></figure>
+<p><code>let</code> binds a value to a local variable.</p>
+<figure class="highlight lisp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">(<span class="name">let</span> ((<span class="name">local-name</span> <span class="string">"yang"</span>))</div><div class="line">     (<span class="name">hello</span> local-name))</div></pre></td></tr></table></figure>
+<p><code>format</code> is able to format a string with given format formula:</p>
+<figure class="highlight lisp"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">(<span class="name">format</span> <span class="string">"hello %s!\n"</span> <span class="string">"visitor"</span>)</div></pre></td></tr></table></figure>
+<p>Of course, there are some interative commands like <code>read-from-minibuffer</code>:</p>
+<figure class="highlight lisp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">(<span class="name">read-from-minibuffer</span> <span class="string">"Enter your name:"</span>)</div><div class="line"><span class="comment">;;; you can get variable name from prompt, such as</span></div><div class="line"></div><div class="line">(<span class="name">defun</span> greeting (<span class="name">from-name</span>)</div><div class="line">  (<span class="name">let</span> ((<span class="name">your-name</span> (<span class="name">read-from-minibuffer</span> <span class="string">"Enter your name: "</span>)))</div><div class="line">    (<span class="name">insert</span> (<span class="name">format</span> <span class="string">"Hello!\n\nI am %s and you are %s."</span></div><div class="line">                    from-name <span class="comment">; the argument of the function</span></div><div class="line">                    your-name <span class="comment">; the let-bound var, entered at prompt</span></div><div class="line">                    ))))</div><div class="line"><span class="comment">;;; evaluate this command</span></div><div class="line">(<span class="name">greeting</span> <span class="string">"Jack"</span>)</div></pre></td></tr></table></figure>
+<p>In this post, it just summaries the basic opeartions from the link mentioned in the first paragraph. More functions or data-structure operations can be discovered in the future code reading.</p>
 
       
     </div>
@@ -336,7 +322,7 @@ Hexo: a fast and simple blog framework. Very ea">
       
         <div class="post-tags">
           
-            <a href="/tags/front-end/" rel="tag">#front-end</a>
+            <a href="/tags/emacs/" rel="tag">#emacs</a>
           
         </div>
       
@@ -345,13 +331,13 @@ Hexo: a fast and simple blog framework. Very ea">
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2017/10/20/emacs-learning-1/" rel="next" title="emacs-learning-1">
+                <i class="fa fa-chevron-left"></i> emacs-learning-1
+              </a>
+            
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/10/20/emacs-learning-1/" rel="prev" title="emacs-learning-1">
-                emacs-learning-1 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -458,7 +444,7 @@ Hexo: a fast and simple blog framework. Very ea">
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Requirement"><span class="nav-number">1.</span> <span class="nav-text">Requirement</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Construction"><span class="nav-number">2.</span> <span class="nav-text">Construction</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Emacs-lisp"><span class="nav-number">1.</span> <span class="nav-text">Emacs lisp</span></a></li></ol></div>
             
           </div>
         </section>
