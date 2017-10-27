@@ -239,6 +239,108 @@
             
               
                 
+                <a class="post-title-link" href="/2017/10/26/emacs-configuration-file/" itemprop="url">
+                  emacs configuration file
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2017-10-26T22:13:05-05:00" content="2017-10-26">
+              2017-10-26
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>In this post, we start to explore the magic of emacs: customized configuration files for emacs. The magic feature of emacs is the extensibility. Comparing to Vim, which is the specialist as a editor. Emacs is more like an single thread operating system which runs as an editor. In order to explore the magic, we start from the basic extended configurations for the emacs.</p>
+<p>Normally, emacs configuration files locate in directory <code>~/.emacs.d</code> or <code>~/.emacs</code>. The help information for <code>Minor mode</code> and <code>Major mode</code> can be explored by pressing key <code>C-h m</code>.</p>
+<blockquote>
+<p><code>M-x package-list-packages</code> lists all the packages can be installed.</p>
+<p>Sevearl packages I installed in my personal emacs configuration file: <strong>auto-complete</strong></p>
+</blockquote>
+<p>Here is my initial configuration file for emacs:</p>
+<figure class="highlight lisp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div></pre></td><td class="code"><pre><div class="line"><span class="comment">;;----------------------------------------</span></div><div class="line"><span class="comment">;;          Disable &amp; Enable modes</span></div><div class="line"><span class="comment">;;----------------------------------------</span></div><div class="line"></div><div class="line"><span class="comment">;; Added by Package.el.  This must come before configurations of</span></div><div class="line"><span class="comment">;; installed packages.  Don't delete this line.  If you don't want it,</span></div><div class="line"><span class="comment">;; just comment it out by adding a semicolon to the start of the line.</span></div><div class="line"><span class="comment">;; You may delete these explanatory comments.</span></div><div class="line">(<span class="name">require</span> 'package)</div><div class="line">(<span class="name">add-to-list</span> 'package-archives '(<span class="string">"melpa"</span> . <span class="string">"http://melpa.milkbox.net/packages/"</span>))</div><div class="line">(<span class="name">package-initialize</span>)</div><div class="line"></div><div class="line">(<span class="name">global-linum-mode</span> <span class="number">1</span>)</div><div class="line">(<span class="name">tool-bar-mode</span> <span class="number">-1</span>)</div><div class="line"></div><div class="line"><span class="comment">;;----------------------------------------</span></div><div class="line"><span class="comment">;;          Emacs theme</span></div><div class="line"><span class="comment">;;----------------------------------------</span></div><div class="line">(<span class="name">load-theme</span> 'dracula <span class="literal">t</span>)</div><div class="line"></div><div class="line"><span class="comment">;;----------------------------------------</span></div><div class="line"><span class="comment">;;          Personal UI Setting</span></div><div class="line"><span class="comment">;;----------------------------------------</span></div><div class="line">(<span class="name">setq</span> cursor-type 'bar)</div><div class="line">(<span class="name">setq</span> inhibit-splash-screen <span class="number">1</span>)</div><div class="line"></div><div class="line"><span class="comment">;;----------------------------------------</span></div><div class="line"><span class="comment">;;          Font</span></div><div class="line"><span class="comment">;;----------------------------------------</span></div><div class="line">(<span class="name">set-default-font</span> <span class="string">"Monaco 16"</span>)</div><div class="line"></div><div class="line"><span class="comment">;;----------------------------------------</span></div><div class="line"><span class="comment">;;          New key binding</span></div><div class="line"><span class="comment">;;----------------------------------------</span></div><div class="line"></div><div class="line"><span class="comment">;;          open init file</span></div><div class="line"><span class="comment">;;----------------------------------------</span></div><div class="line">(<span class="name">defun</span> open-init-file ()</div><div class="line">  (<span class="name">interactive</span>)</div><div class="line">  (<span class="name">find-file</span> <span class="string">"~/.emacs.d/init.el"</span>))</div><div class="line">(<span class="name">global-set-key</span> (<span class="name">kbd</span> <span class="string">"&lt;f1&gt;"</span>) 'open-init-file)</div><div class="line"></div><div class="line"><span class="comment">;;----------------------------------------</span></div><div class="line"><span class="comment">;;          auto-complete</span></div><div class="line"><span class="comment">;;----------------------------------------</span></div><div class="line">(<span class="name">custom-set-variables</span></div><div class="line"> <span class="comment">;; custom-set-variables was added by Custom.</span></div><div class="line"> <span class="comment">;; If you edit it by hand, you could mess it up, so be careful.</span></div><div class="line"> <span class="comment">;; Your init file should contain only one such instance.</span></div><div class="line"> <span class="comment">;; If there is more than one, they won't work right.</span></div><div class="line"> '(package-selected-packages (quote (dracula-theme auto-complete))))</div><div class="line">(<span class="name">custom-set-faces</span></div><div class="line"> <span class="comment">;; custom-set-faces was added by Custom.</span></div><div class="line"> <span class="comment">;; If you edit it by hand, you could mess it up, so be careful.</span></div><div class="line"> <span class="comment">;; Your init file should contain only one such instance.</span></div><div class="line"> <span class="comment">;; If there is more than one, they won't work right.</span></div><div class="line"> )</div><div class="line">(<span class="name">require</span> 'auto-complete)</div><div class="line">(<span class="name">require</span> 'auto-complete-config)</div><div class="line">(<span class="name">ac-config-default</span>)</div></pre></td></tr></table></figure>
+<p>This will be extended in the future study.</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2017/10/23/emacs-learning-2/" itemprop="url">
                   emacs-learning-2
                 </a>
@@ -832,7 +934,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">3</span>
+              <span class="site-state-item-count">4</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
